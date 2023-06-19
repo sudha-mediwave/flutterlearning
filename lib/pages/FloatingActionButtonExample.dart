@@ -15,5 +15,6 @@ class FloatingActionButtonExample extends StatelessWidget {
         print('click to next page'); // Your code here
       },
     );
+    floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat;
   }
 }
