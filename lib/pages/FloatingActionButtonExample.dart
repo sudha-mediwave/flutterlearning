@@ -7,14 +7,14 @@ class FloatingActionButtonExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       elevation: 10.0,
-      child: Icon(
+      child: const Icon(
         Icons.add,
         color: Colors.white,
       ),
       onPressed: () {
-        print('click to next page'); // Your code here
+        print('click to next page');
       },
     );
-    floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat;
+    // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat;
   }
 }
