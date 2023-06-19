@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterlearning/pages/DrawerMenuDemo.dart';
+import 'package:flutterlearning/pages/FloatingActionButtonExample.dart';
 
 import 'pages/IconButtonExample.dart';
 
@@ -65,21 +66,24 @@ class _MyAppState extends State<MyApp> {
               'My first flutter project',
               style: TextStyle(fontSize: 25.0, color: Colors.amber),
             ),
-            IconButtonExample()
+            IconButtonExample(),
+            FloatingActionButtonExample(),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        elevation: 10.0,
-        child: const Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-        onPressed: () {
-          print('add next page');
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   elevation: 10.0,
+      //   child: const Icon(
+      //     Icons.add,
+      //     color: Colors.white,
+      //   ),
+      //   onPressed: () {
+      //     print('add next page');
+      //   },
+      // ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
       drawer: const DrawerMenuDemo(),
       persistentFooterButtons: <Widget>[
         MaterialButton(
