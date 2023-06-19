@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlearning/MyApp.dart';
+import 'App.dart';
 
-void main() => runApp(
-      MaterialApp(
-        home: MyApp(),
-        debugShowCheckedModeBanner: false,
-      ),
-    );
+// ignore: prefer_const_constructors
+void main() => runApp(App());
