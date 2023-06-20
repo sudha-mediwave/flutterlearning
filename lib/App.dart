@@ -10,6 +10,16 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Named Routes Demo',
+      builder: (context, child) => DecoratedBox(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: child,
+      ),
       initialRoute: '/',
       routes: {
         '/': (context) => const FirstScreen(),

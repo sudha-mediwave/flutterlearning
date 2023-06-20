@@ -5,6 +5,8 @@ class BottomNavBarExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      currentIndex: 2,
+      fixedColor: Colors.pink,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

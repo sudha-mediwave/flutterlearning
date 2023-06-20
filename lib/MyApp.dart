@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutterlearning/pages/AppBarExample.dart';
+import 'package:flutterlearning/pages/BottomNavBarExample.dart';
 import 'package:flutterlearning/pages/DrawerMenuDemo.dart';
 import 'package:flutterlearning/pages/FloatingActionButtonExample.dart';
+import 'package:flutterlearning/pages/MaterialButtonExample.dart';
 
 import 'pages/IconButtonExample.dart';
+import 'pages/my_clipper.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -58,32 +62,46 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+//       body: const Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text(
+//               'My first flutter project',
+//               style: TextStyle(fontSize: 25.0, color: Colors.amber),
+//             ),
+//             // IconButtonExample(),
+//             // FloatingActionButtonExample(),
+//             // MaterialButtonExample(),
+//             // AppBarExample(),
+// // BottomNavBarExample()
+//           ],
+//         ),
+//       ),
+
+  backgroundColor: Colors.indigo,
+        body: Stack(
           children: [
-            Text(
-              'My first flutter project',
-              style: TextStyle(fontSize: 25.0, color: Colors.amber),
-            ),
-            IconButtonExample(),
-            FloatingActionButtonExample(),
+            ClipPath(
+              clipper: MyClipper(),
+              child: Container(
+                color: Colors.white,
+              )
+            )
           ],
         ),
+
+      floatingActionButton: FloatingActionButton(
+        elevation: 10.0,
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          print('add next page');
+        },
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   elevation: 10.0,
-      //   child: const Icon(
-      //     Icons.add,
-      //     color: Colors.white,
-      //   ),
-      //   onPressed: () {
-      //     print('add next page');
-      //   },
-      // ),
-
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-
       drawer: const DrawerMenuDemo(),
       persistentFooterButtons: <Widget>[
         MaterialButton(
@@ -111,15 +129,30 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
       ],
-// bottomNavigationBar: BottomNavigationBar(items: [
-//   BottomNavigationBarItem(icon: Icon(Icons.home),
-
-//   ),
-//  BottomNavigationBarItem(icon: Icon(Icons.home),
-//   ),
-//    BottomNavigationBarItem(icon: Icon(Icons.home),
-//   ),
-// ]),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 1,
+        fixedColor: Colors.pink,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            //  backgroundColor: Colors.purple,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Business',
+            //  backgroundColor: Colors.pink,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+            //  backgroundColor: Colors.red,
+          ),
+        ],
+        onTap: (int index){
+          print(index.toString());
+        },
+      ),
     );
   }
 }
