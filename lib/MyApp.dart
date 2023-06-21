@@ -79,17 +79,16 @@ class _MyAppState extends State<MyApp> {
 //         ),
 //       ),
 
-  backgroundColor: Colors.indigo,
-        body: Stack(
-          children: [
-            ClipPath(
+      backgroundColor: Colors.indigo,
+      body: Stack(
+        children: [
+          ClipPath(
               clipper: MyClipper(),
               child: Container(
                 color: Colors.white,
-              )
-            )
-          ],
-        ),
+              ))
+        ],
+      ),
 
       floatingActionButton: FloatingActionButton(
         elevation: 10.0,
@@ -149,7 +148,7 @@ class _MyAppState extends State<MyApp> {
             //  backgroundColor: Colors.red,
           ),
         ],
-        onTap: (int index){
+        onTap: (int index) {
           print(index.toString());
         },
       ),
