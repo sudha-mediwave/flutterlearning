@@ -47,9 +47,16 @@ class FifthScreen extends StatelessWidget {
                     'UI Design',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
-                  Icon(
-                    Icons.tune_rounded,
-                    size: 30,
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.black,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.tune_rounded,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {},
+                    ),
                   ),
                 ],
               ),
@@ -97,73 +104,59 @@ class FifthScreen extends StatelessWidget {
               height: 10,
             ),
             Container(
-              child: Expanded(
-                child: Column(
-                  children: [
-                    ListViewExample(
-                        title: 'UI/UX Designer',
-                        subtitle: 'Figma',
-                        leadingIcon: Icons.facebook_rounded,
-                        trailingIcon: Icons.favorite,
-                        listtileColor: Colors.grey[100],
-                        leadiconColor: Colors.blue,
-                        trailingIconColor: Colors.red),
-                    ListViewExample(
-                        title: 'Front-End',
-                        subtitle: 'Flutter',
-                        leadingIcon: Icons.facebook_rounded,
-                        trailingIcon: Icons.favorite,
-                        listtileColor: Colors.grey,
-                        leadiconColor: Colors.blue,
-                        trailingIconColor: Colors.white),
-                    ListViewExample(
-                        title: 'Back-End',
-                        subtitle: 'Nodejs',
-                        leadingIcon: Icons.facebook_rounded,
-                        trailingIcon: Icons.favorite,
-                        listtileColor: Colors.grey[100],
-                        leadiconColor: Colors.blue,
-                        trailingIconColor: Colors.red),
-                    ListViewExample(
-                        title: 'Admin',
-                        subtitle: 'Admin',
-                        leadingIcon: Icons.facebook_rounded,
-                        trailingIcon: Icons.favorite,
-                        listtileColor: Colors.grey[100],
-                        leadiconColor: Colors.blue,
-                        trailingIconColor: Colors.red),
-                    ListViewExample(
-                        title: 'Project Suport',
-                        subtitle: 'Project',
-                        leadingIcon: Icons.facebook_rounded,
-                        trailingIcon: Icons.favorite,
-                        listtileColor: Colors.grey[100],
-                        leadiconColor: Colors.blue,
-                        trailingIconColor: Colors.red),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  ListViewExample(
+                      title: 'UI/UX Designer',
+                      subtitle: 'Figma',
+                      leadingIcon: Icons.facebook_rounded,
+                      trailingIcon: Icons.favorite,
+                      listtileColor: Colors.grey[100],
+                      leadiconColor: Colors.blue,
+                      trailingIconColor: Colors.red),
+                  ListViewExample(
+                      title: 'Front-End',
+                      subtitle: 'Flutter',
+                      leadingIcon: Icons.facebook_rounded,
+                      trailingIcon: Icons.favorite,
+                      listtileColor: Colors.grey,
+                      leadiconColor: Colors.blue,
+                      trailingIconColor: Colors.white),
+                  ListViewExample(
+                      title: 'Back-End',
+                      subtitle: 'Nodejs',
+                      leadingIcon: Icons.facebook_rounded,
+                      trailingIcon: Icons.favorite,
+                      listtileColor: Colors.grey[100],
+                      leadiconColor: Colors.blue,
+                      trailingIconColor: Colors.red),
+                  ListViewExample(
+                      title: 'Admin',
+                      subtitle: 'Admin',
+                      leadingIcon: Icons.facebook_rounded,
+                      trailingIcon: Icons.favorite,
+                      listtileColor: Colors.grey[100],
+                      leadiconColor: Colors.blue,
+                      trailingIconColor: Colors.red),
+                  ListViewExample(
+                      title: 'Project Suport',
+                      subtitle: 'Project',
+                      leadingIcon: Icons.facebook_rounded,
+                      trailingIcon: Icons.favorite,
+                      listtileColor: Colors.grey[100],
+                      leadiconColor: Colors.blue,
+                      trailingIconColor: Colors.red),
+                  ListViewExample(
+                      title: 'Project Suport',
+                      subtitle: 'Project',
+                      leadingIcon: Icons.facebook_rounded,
+                      trailingIcon: Icons.favorite,
+                      listtileColor: Colors.grey[100],
+                      leadiconColor: Colors.blue,
+                      trailingIconColor: Colors.red),
+                ],
               ),
-              // child: ListTile(
-              //   tileColor: const Color.fromARGB(255, 245, 241, 241),
-              //   shape: ContinuousRectangleBorder(
-              //       borderRadius: BorderRadius.circular(20.0),
-              //       side: BorderSide(width: 1.0, color: Colors.black)),
-              //   leading: Icon(
-              //     Icons.facebook_outlined,
-              //     color: Colors.blue,
-              //     size: 40,
-              //   ),
-              //   title: const Text('welcome'),
-              //   subtitle: Text('Home'),
-              //   trailing: Icon(
-              //     Icons.favorite,
-              //     color: Colors.red,
-              //   ),
-              // ),
             ),
-            Divider(
-              height: 1,
-            )
           ],
         ),
       ),

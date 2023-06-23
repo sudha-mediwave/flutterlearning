@@ -26,6 +26,7 @@ class ListViewExample extends StatelessWidget {
         leading: Icon(
           leadingIcon,
           color: leadiconColor,
+          size: 30,
         ),
         title: Text(title),
         subtitle: Text(subtitle),
