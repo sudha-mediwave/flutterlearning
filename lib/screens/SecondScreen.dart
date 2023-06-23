@@ -22,6 +22,9 @@ class SecondScreen extends StatelessWidget {
                         Icons.arrow_back,
                         color: Colors.white,
                       ),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Text(
                         'Account',
                         style: TextStyle(color: Colors.white),
@@ -38,6 +41,9 @@ class SecondScreen extends StatelessWidget {
                             color: Colors.white,
                           )
                         ],
+                      ),
+                      SizedBox(
+                        width: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -143,7 +149,7 @@ class SecondScreen extends StatelessWidget {
                     height: 1,
                   ),
                   Container(
-                    height: 70.0,
+                    height: 50.0,
                     width: double.infinity,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -161,7 +167,7 @@ class SecondScreen extends StatelessWidget {
                     height: 1,
                   ),
                   Container(
-                    height: 70.0,
+                    height: 50.0,
                     width: double.infinity,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -179,7 +185,7 @@ class SecondScreen extends StatelessWidget {
                     height: 1,
                   ),
                   Container(
-                    height: 70.0,
+                    height: 50.0,
                     width: double.infinity,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -197,7 +203,7 @@ class SecondScreen extends StatelessWidget {
                     height: 1,
                   ),
                   Container(
-                    height: 70.0,
+                    height: 50.0,
                     width: double.infinity,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -216,7 +222,9 @@ class SecondScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               Column(
                 children: [
                   Row(
@@ -247,6 +255,16 @@ class SecondScreen extends StatelessWidget {
                         ],
                       ),
                     ],
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/third');
+                    },
+                    child: const Text('Go to 3rd screen'),
                   ),
                 ],
               )

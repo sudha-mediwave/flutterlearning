@@ -22,7 +22,7 @@ class FirstScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/second');
               },
-              child: const Text('Launch screen'),
+              child: const Text('Go to 2nd screen'),
             ),
             // child: Column(
             //   children: [
