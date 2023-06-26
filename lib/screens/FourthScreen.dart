@@ -154,7 +154,18 @@ class FourthScreen extends StatelessWidget {
                       child: const Text('Go to 5th screen'),
                     ),
                   ],
-                )
+                ),
+                Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.tune_rounded,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {},
+                    )
+                  ],
+                ),
               ],
             ),
           ],

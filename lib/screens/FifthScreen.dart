@@ -8,14 +8,16 @@ class FifthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.chevron_left,
             color: Colors.black,
           ),
           onPressed: () {
-            print('icon click');
+            Navigator.pushNamed(context, '/fourth');
           },
         ),
         title: const Text(
@@ -35,129 +37,156 @@ class FifthScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'UI Design',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.black,
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.tune_rounded,
-                        color: Colors.white,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'UI Design',
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+                    Ink(
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10.0)),
+                      child: InkWell(
+                        // borderRadius: BorderRadius.circular(500.0),
+                        onTap: () {},
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Icon(
+                            Icons.tune,
+                            size: 20.0,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Text(
+                      '35 job oppertunity',
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                child: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ElevatedButton(
                       onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.black,
+                      ),
+                      child: const Text('Most Relevant'),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              child: Row(
-                children: [
-                  Text(
-                    '35 job oppertunity',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(primary: Colors.black),
-                    child: const Text('Most Relevant'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(primary: Colors.grey[100]),
-                    child: const Text(
-                      'Most Recent',
-                      style: TextStyle(color: Colors.black),
+                    SizedBox(
+                      width: 20,
                     ),
-                  ),
-                ],
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.grey[100],
+                      ),
+                      child: const Text(
+                        'Most Recent',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              child: Column(
-                children: [
-                  ListViewExample(
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    ListViewExample(
                       title: 'UI/UX Designer',
                       subtitle: 'Figma',
-                      leadingIcon: Icons.facebook_rounded,
+                      leadingIcon: Icons.design_services,
                       trailingIcon: Icons.favorite,
                       listtileColor: Colors.grey[100],
-                      leadiconColor: Colors.blue,
-                      trailingIconColor: Colors.red),
-                  ListViewExample(
+                      leadiconColor: Colors.amber,
+                      trailingIconColor: Colors.red,
+                      titleColor: Colors.black,
+                      titleSize: 18,
+                      subtitlecolor: Colors.white,
+                    ),
+                    ListViewExample(
                       title: 'Front-End',
                       subtitle: 'Flutter',
-                      leadingIcon: Icons.facebook_rounded,
+                      leadingIcon: Icons.developer_board,
                       trailingIcon: Icons.favorite,
-                      listtileColor: Colors.grey,
-                      leadiconColor: Colors.blue,
-                      trailingIconColor: Colors.white),
-                  ListViewExample(
+                      listtileColor: Color.fromARGB(255, 35, 34, 34),
+                      leadiconColor: Colors.pink,
+                      trailingIconColor: Colors.white,
+                      titleColor: Colors.white,
+                      titleSize: 18,
+                      subtitlecolor: Colors.white,
+                    ),
+                    ListViewExample(
                       title: 'Back-End',
                       subtitle: 'Nodejs',
-                      leadingIcon: Icons.facebook_rounded,
+                      leadingIcon: Icons.developer_mode,
                       trailingIcon: Icons.favorite,
                       listtileColor: Colors.grey[100],
                       leadiconColor: Colors.blue,
-                      trailingIconColor: Colors.red),
-                  ListViewExample(
+                      trailingIconColor: Colors.red,
+                      titleColor: Colors.black,
+                      titleSize: 18,
+                      subtitlecolor: Colors.black,
+                    ),
+                    ListViewExample(
                       title: 'Admin',
                       subtitle: 'Admin',
-                      leadingIcon: Icons.facebook_rounded,
+                      leadingIcon: Icons.admin_panel_settings,
                       trailingIcon: Icons.favorite,
                       listtileColor: Colors.grey[100],
-                      leadiconColor: Colors.blue,
-                      trailingIconColor: Colors.red),
-                  ListViewExample(
+                      leadiconColor: Colors.orange,
+                      trailingIconColor: Colors.red,
+                      titleColor: Colors.black,
+                      subtitlecolor: Colors.black,
+                      titleSize: 18,
+                    ),
+                    ListViewExample(
                       title: 'Project Suport',
                       subtitle: 'Project',
-                      leadingIcon: Icons.facebook_rounded,
+                      leadingIcon: Icons.support_agent,
                       trailingIcon: Icons.favorite,
                       listtileColor: Colors.grey[100],
-                      leadiconColor: Colors.blue,
-                      trailingIconColor: Colors.red),
-                  ListViewExample(
-                      title: 'Project Suport',
-                      subtitle: 'Project',
-                      leadingIcon: Icons.facebook_rounded,
-                      trailingIcon: Icons.favorite,
-                      listtileColor: Colors.grey[100],
-                      leadiconColor: Colors.blue,
-                      trailingIconColor: Colors.red),
-                ],
+                      leadiconColor: Colors.green,
+                      trailingIconColor: Colors.red,
+                      titleColor: Colors.black,
+                      titleSize: 18,
+                      subtitlecolor: Colors.black,
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
