@@ -4,6 +4,7 @@ import 'package:flutterlearning/screens/FifthScreen.dart';
 import 'package:flutterlearning/screens/FirstScreen.dart';
 import 'package:flutterlearning/screens/FourthScreen.dart';
 import 'package:flutterlearning/screens/SecondScreen.dart';
+import 'package:flutterlearning/screens/SixthScreen.dart';
 import 'package:flutterlearning/screens/ThirdScreen.dart';
 
 class App extends StatelessWidget {
@@ -31,6 +32,7 @@ class App extends StatelessWidget {
         '/third': (context) => const ThirdScreen(),
         '/fourth': (context) => const FourthScreen(),
         '/fifth': (context) => const FifthScreen(),
+        '/sixth': (context) => const SixthScreen(),
       },
     );
 
